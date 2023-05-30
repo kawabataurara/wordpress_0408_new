@@ -14,7 +14,7 @@
 <?php get_header(); ?>
 
 <?php get_footer(); ?>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script> -->
 	<script src="./wp-content/themes/underscores/js/main.js"></script>
 
  </body>
