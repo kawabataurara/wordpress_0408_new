@@ -176,15 +176,37 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// 5/20 記述
 
-function company_php($params = array()) {
-    extract(shortcode_atts(array(
-        'file' => 'default'
-    ), $params));
-    ob_start();
-    include(get_theme_root() . '/' . get_template() . "/$file.php");
-    return ob_get_clean();
+add_action('wp_enqueue_scripts', 'add_scripts');
+
+function add_scripts() {
+   wp_enqueue_script(
+		'splide-script',
+		'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js',
+		array(),
+		 '4.0.7'
+	);
+
+	wp_enqueue_script(
+		'slide-script',
+		get_template_directory_uri() . '/js/slide.js',
+		array(),
+		'1.0.0'
+	);
+
+	wp_enqueue_script(
+		'main-script',
+		get_template_directory_uri() . '/js/main.js',
+		array(),
+		'1.0.0'
+	);
 }
 
-add_shortcode('company_php', 'company_php');
+add_filter('script_loader_tag', 'add_defer', 10, 3);
+function add_defer($tag, $handle) {
+  if ($handle !== 'main-script') {
+    return $tag;
+  }
+
+  return str_replace(' src=', ' defer src=', $tag);
+}

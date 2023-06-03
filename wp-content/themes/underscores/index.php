@@ -17,16 +17,16 @@
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide">
-          <img src="./wp-content/uploads/mv1_pc.webp" class="PC" alt="スライダー画像_PC_1">
-          <img src="./wp-content/uploads/mv1_sp.webp" class="SP" alt="スライダー画像_SP_1">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mv1_pc.webp" class="PC" alt="スライダー画像_PC_1">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mv1_sp.webp" class="SP" alt="スライダー画像_SP_1">
         </li>
         <li class="splide__slide">
-          <img src="./wp-content/uploads/mv2_pc.webp" class="PC" alt="スライダー画像_PC_2">
-          <img src="./wp-content/uploads/mv2_sp.webp" class="SP" alt="スライダー画像_SP_2">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mv2_pc.webp" class="PC" alt="スライダー画像_PC_2">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mv2_sp.webp" class="SP" alt="スライダー画像_SP_2">
         </li>
         <li class="splide__slide">
-          <img src="./wp-content/uploads/mv3_pc.webp" class="PC" alt="スライダー画像_PC_3">
-          <img src="./wp-content/uploads/mv3_sp.webp" class="SP" alt="スライダー画像_SP_3">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mv3_pc.webp" class="PC" alt="スライダー画像_PC_3">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mv3_sp.webp" class="SP" alt="スライダー画像_SP_3">
         </li>
       </ul>
     </div>
@@ -83,7 +83,9 @@
 		<section class="company-profile">
 			<div class="container">
 				<div class="profile-list company">
-					<div class="profile-images"><img alt="会社概要のイメージ画像" src="./wp-content/uploads/company.png">
+					<div class="profile-images">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/company.jpg" alt="会社概要のイメージ画像">
+
 					</div>
 					<div class="profile-items">
 						<div class="profile-text">
@@ -95,7 +97,9 @@
 					</div>
 				</div>
 				<div class="profile-list services">
-					<div class="profile-images"><img alt="事業内容のイメージ画像" src="./wp-content/uploads/services.png"></div>
+					<div class="profile-images">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/services.jpg" alt="事業内容のイメージ画像">
+					</div>
 					<div class="profile-items">
 						<div class="profile-text">
 							<h5>事業内容</h5>
@@ -104,7 +108,9 @@
 					</div>
 				</div>
 				<div class="profile-list recruit">
-					<div class="profile-images"><img alt="採用情報のイメージ画像" src="./wp-content/uploads/recruit.png"></div>
+					<div class="profile-images">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/recruit.jpg" alt="採用情報のイメージ画像">
+					</div>
 					<div class="profile-items">
 						<div class="profile-text">
 							<h5>採用情報</h5>
@@ -124,21 +130,21 @@
 			<div class="content-inner">
 				<ul class="blog-list">
 					<li class="blog-items">
-						<img alt="ブログの挿入画像" src="./wp-content/uploads/blog1.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/blog1.jpg" alt="ブログの挿入画像">
 						<p class="blog-title">ブログタイトルが入りますブログタイトルが入りますブログタイトルが入りますブログタイトル</p>
 						<div class="blog-type-date">
 							<p>社員紹介</p><time>2021.10.01</time>
 						</div>
 					</li>
 					<li class="blog-items">
-						<img alt="ブログの挿入画像" src="./wp-content/uploads/blog2.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/blog2.png" alt="ブログの挿入画像">
 						<p class="blog-title">ブログタイトルが入りますブログタイトルが入りますブログタイトルが入りますブログタイトル</p>
 						<div class="blog-type-date">
 							<p>社内イベント</p><time>2021.10.01</time>
 						</div>
 					</li>
 					<li class="blog-items">
-						<img alt="ブログの挿入画像" src="./wp-content/uploads/blog3.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/blog3.jpg" alt="ブログの挿入画像">
 						<p class="blog-title">ブログタイトルが入りますブログタイトルが入りますブログタイトルが入りますブログタイトル</p>
 						<div class="blog-type-date">
 							<p>社員紹介</p><time>2021.10.01</time>
@@ -155,8 +161,8 @@ get_sidebar();
 get_footer();
 ?>
 
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-<script src="./wp-content/themes/underscores/js/slide.js"></script>
-<script src="./wp-content/themes/underscores/js/main.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/slide.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script> -->
 </body>
 </html>
