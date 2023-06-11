@@ -12,9 +12,10 @@ const options = {
   arrows: false,
   autoplay: true,
   interval: 3000,
-  type: "fade",
+  // type: "fade",
   rewind: true,
 };
 
-const splide = new Splide(".splide", options);
-splide.mount();
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".splide", options).mount();
+});

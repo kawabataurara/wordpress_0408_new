@@ -1,4 +1,4 @@
-
+<!--
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -6,9 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
-</head>
+</head> -->
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<link href="<?php echo get_template_directory_uri(); ?>/css/reset.css" rel="stylesheet">
+	<link href="<?php echo get_template_directory_uri(); ?>/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+</head>
 <body <?php body_class(); ?>>
 
 	<header id="js-header">
@@ -57,4 +67,5 @@
 				</ul>
 			</nav>
 		</div>
+		<?php wp_head(); ?>
 	</header>

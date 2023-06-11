@@ -176,32 +176,38 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// フォント
+// function mytheme_enqueue_fonts() {
+//     wp_enqueue_style( 'mytheme-google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&family=Source+Sans+Pro:wght@300;400&display=swap', false );
+// }
+// add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_fonts' );
+
+
 
 add_action('wp_enqueue_scripts', 'add_scripts');
 
 function add_scripts() {
+
+	 wp_enqueue_style( 'mytheme-google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&family=Source+Sans+Pro:wght@300;400&display=swap', false );
+
    wp_enqueue_script(
-		'splide-script',
-		'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js',
-		array(),
-		 '4.0.7'
-	);
+        'splide-script',
+        get_template_directory_uri() . '/js/splide.min.js',
+        array()
+    );
 
-	wp_enqueue_script(
-		'slide-script',
-		get_template_directory_uri() . '/js/slide.js',
-		array(),
-		'1.0.0'
-	);
+    wp_enqueue_script(
+        'slide-script',
+        get_template_directory_uri() . '/js/slide.js',
+        array()
+    );
 
-	wp_enqueue_script(
-		'main-script',
-		get_template_directory_uri() . '/js/main.js',
-		array(),
-		'1.0.0'
-	);
+    wp_enqueue_script(
+        'main-script',
+        get_template_directory_uri() . '/js/main.js',
+        array()
+    );
 }
-
 add_filter('script_loader_tag', 'add_defer', 10, 3);
 function add_defer($tag, $handle) {
   if ($handle !== 'main-script') {
@@ -210,3 +216,16 @@ function add_defer($tag, $handle) {
 
   return str_replace(' src=', ' defer src=', $tag);
 }
+
+// newsアーカイブページ用
+// とりあえず入れただけ
+function post_has_archive($args, $post_type){
+  if('post'== $post_type){
+    $args['rewrite']=true;
+    $args['has_archive']='news';
+  }
+  return $args;
+}
+
+
+add_filter('register_post_type_args', 'post_has_archive', 10, 2);

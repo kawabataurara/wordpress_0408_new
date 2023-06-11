@@ -1,29 +1,54 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Document</title>
-	<link href="./wp-content/themes/twentytwentyone/reset.css" rel="stylesheet">
-	<link href="./wp-content/themes/twentytwentyone/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
-	<!-- <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script> -->
-
-</head>
+<?php get_header(); ?>
 <body>
-	<?php get_header(); ?>
+	<main class="company-page">
+		<section class="other-main-visual">
+				<h2>COMPANY</h2>
+				<p>会社概要</p>
+			</div>
+		</section>
 
-	<section class="company-main-visual">
-		<img src="./wp-content/uploads/mv_company.jpg" alt="会社概要トップ画像">
-		<div class="others-title">
-			<h2>COMPANY</h2>
-			<p>会社概要</p>
-		</div>
-	</section>
-
-	<main>
-
+		<section class="company-info">
+			<div class="content-inner">
+				<ul>
+					<li>
+						<p>会社名</p>
+						<p>株式会社LULL</p>
+					</li>
+					<li>
+						<p>所在地</p>
+						<p>&#12306;150-0002<br>東京都渋谷区渋谷3丁目10-13&nbsp;TOKYU&nbsp;REIT渋谷Rビル B1</p>
+					</li>
+					<li>
+						<p>代表取締役</p>
+						<p>仁藤&nbsp;敬介</p>
+					</li>
+					<li>
+						<p>事業内容</p>
+						<p>一般派遣事業&nbsp;&frasl;&nbsp;WEB制作事業&nbsp;&frasl;&nbsp;SES事業</p>
+					</li>
+					<li>
+						<p>許可番号</p>
+						<p>労働者派遣事業（許可番号&frasl;派13-314354）<br>有料職業紹介事業（許可番号&frasl;13-ユ-311300）</p>
+					</li>
+					<li>
+						<p>設立年月日</p>
+						<p>2019年6月3日</p>
+					</li>
+					<li>
+						<p>資本金</p>
+						<p>20,000,000円</p>
+					</li>
+					<li>
+						<p>電話番号</p>
+						<p>03-6457-3780</p>
+					</li>
+					<li>
+						<p>従業員数</p>
+						<p>310名(正社員・契約社員合計) ※2022年8月現在</p>
+					</li>
+				</ul>
+			</div>
+		</section>
 	</main>
 
 

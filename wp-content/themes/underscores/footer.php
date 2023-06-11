@@ -35,5 +35,6 @@
 				<p class="copyright">&copy;LULL INC. ALL RIGHTS RESERVED.</p>
 			</div>
 		</footer>
+		<?php wp_footer() ?>
 </body>
 </html>

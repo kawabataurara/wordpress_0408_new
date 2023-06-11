@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Document</title>
-	<link href="./wp-content/themes/twentytwentyone/reset.css" rel="stylesheet">
-	<link href="./wp-content/themes/twentytwentyone/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
-</head>
-<body>
-	<?php get_header(); ?>
-
+<?php get_header(); ?>
+<main>
 	<section class="main-visual">
 		<div class="splide" aria-label="スライダー">
     <div class="splide__track">
@@ -43,8 +31,6 @@
       </h3>
 		</div>
 	</section>
-
-	<main class="main">
 		<section class="news">
 			<div class="container">
 				<div class="content-inner">
@@ -76,7 +62,7 @@
 								</li>
 							</ul>
 						</div>
-						<p class="news-list-other"><a href="">お知らせ一覧はこちら</a></p>
+						<p class="news-list-other"><a href="<?php echo home_url(); ?>/?page_id=80">お知らせ一覧はこちら</a></p>
 				</div>
 			</div>
 		</section>
@@ -120,7 +106,6 @@
 				</div>
 			</div>
 		</section>
-	</main>
 	<section class="section-blog">
 		<div class="container">
 			<div class="section-title">
@@ -155,14 +140,15 @@
 			</div>
 		</div>
 	</section>
-
+</main>
 	<?php
 get_sidebar();
 get_footer();
 ?>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/slide.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script> -->
+<!-- <script src="<?php echo get_template_directory_uri(); ?>/js/splide.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/slide.js"></script> -->
+
 </body>
 </html>
