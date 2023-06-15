@@ -134,7 +134,6 @@ li.menu_single:hover ul.menu__second-level {
 	top: 60%;
 	transform: translateY(-60%);
 	-webkit-transform: translateY(-60%);
-	-ms-transform: translateY(-60%);
 	left: 10%;
 }
 .main-visual .main-title p span {
@@ -389,7 +388,6 @@ footer .copyright {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	z-index: 100;
 	text-align: center;
 	color: #fff;
@@ -526,7 +524,6 @@ footer .copyright {
 	left: 65%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
 }
 .contact-form li p:first-child {
 	position: relative;
