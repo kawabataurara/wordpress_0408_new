@@ -1,14 +1,15 @@
 <?php get_header(); ?>
 <body>
-	<main class="company-page">
-		<section class="other-main-visual">
+	<main class="company_page">
+		<section class="other_main_visual js_fadeIn">
+			<div class="other_main_visual__title">
 				<h2>COMPANY</h2>
 				<p>会社概要</p>
 			</div>
 		</section>
 
-		<section class="company-info">
-			<div class="content-inner">
+		<section class="company_page__info js_fadeIn">
+			<div class="content_inner">
 				<ul>
 					<li>
 						<p>会社名</p>

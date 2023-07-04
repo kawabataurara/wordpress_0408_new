@@ -12,6 +12,8 @@
     display: revert;
 }
 
+
+
 /* Preferred box-sizing value */
 *,
 *::before,
@@ -25,7 +27,7 @@ a, button {
 }
 
 /* Remove list styles (bullets/numbers) */
-ol, ul, menu {
+ul, menu {
     list-style: none;
 }
 

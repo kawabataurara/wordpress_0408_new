@@ -27,7 +27,7 @@ if ( ! function_exists( 'underscores_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'underscores' ),
+			// esc_html_x( 'Posted on %s', 'post date', 'underscores' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -63,7 +63,9 @@ if ( ! function_exists( 'underscores_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'underscores' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'underscores' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' .
+				//  esc_html__( 'Posted in %1$s', 'underscores' ) . '</span>',
+				 $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */

@@ -229,3 +229,54 @@ function post_has_archive($args, $post_type){
 
 
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+
+// 6/19ページネーション用
+// function include_my_php($params = array()) {
+//     extract(shortcode_atts(array(
+//         'file' => 'default'
+//     ), $params));
+//     ob_start();
+//     include(get_theme_root() . '/' . get_template() . "/$file.php");
+//     return ob_get_clean();
+// }
+
+// add_shortcode('include_php', 'include_my_php');
+
+
+
+
+// カスタム投稿タイプの追加
+function add_custom_post_type(){
+    // 制作実績
+    register_post_type(
+        'blog', // 1.投稿タイプ名
+        array(   // 2.オプション
+            'label' => 'ブログ', // 投稿タイプの名前
+            'public'        => true, // 利用する場合はtrueにする
+            'has_archive'   => true, // この投稿タイプのアーカイブを有効にする
+            'menu_position' => 5, // この投稿タイプが表示されるメニューの位置
+            'menu_icon'     => 'dashicons-edit', // メニューで使用するアイコン
+            'supports' => array( // サポートする機能
+                'title',
+                'editor',
+            )
+        )
+    );
+}
+add_action('init', 'add_custom_post_type');
+
+// カスタムタクソノミーの追加
+function add_custom_taxonomy(){
+    // 制作実績(カテゴリー)
+    register_taxonomy(
+        'blog-category', // 1.タクソノミーの名前
+        'blog',          // 2.利用する投稿タイプ
+        array(            // 3.オプション
+            'label' => 'カテゴリー', // タクソノミーの表示名
+            'hierarchical' => true, // 階層を持たせるかどうか
+            'public' => true, // 利用する場合はtrueにする
+        )
+    );
+}
+add_action('init', 'add_custom_taxonomy');
