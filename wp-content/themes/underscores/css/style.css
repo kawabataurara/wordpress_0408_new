@@ -27,6 +27,7 @@ img {
 	font-size: clamp(20px, 44 / 1350 * 100vw, 44px);
 	font-weight: bold;
 	margin-bottom: 0.8rem;
+	line-height: 1;
 }
 .content_inner {
 	width: min(70%, 1000px);
@@ -181,7 +182,43 @@ section.appear {
 	gap: 8%;
 	margin-bottom: 40px;
 }
-.news .news__list li {
+
+/* プラグインの記述 */
+
+.news_layout .display-posts-listing {
+	width: 100%;
+}
+.news_layout .listing-item {
+	position: relative;
+}
+.news_layout .listing-item:not(:last-child) {
+	margin-bottom: 4px;
+}
+.news_layout .listing-item a {
+	position: absolute;
+	left: 120px;
+	overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+}
+.news_layout .listing-item a:hover,
+.news_layout .listing-item a:hover ~ .date {
+	color: #207BE8;
+	transition: 0.2s;
+}
+
+.news_layout .listing-item .date {
+	color: #979797;
+	font-size: 0.875rem;
+}
+.news .news__list-other {
+	text-align: right;
+}
+
+
+
+/* .news .news__list li {
 	display: flex;
 	align-items: center;
 	gap: 5%;
@@ -199,7 +236,9 @@ section.appear {
 .news .news__list-other {
 	text-align: right;
 	font-weight: bold;
-}
+} */
+
+
 /* 矢印 */
 
 .news .news__list-other a, .section_blog .blog__list--all a {
@@ -257,9 +296,9 @@ section.appear {
 }
 
 
-.news a {
+/* .news a {
 	margin: 2rem 0 0 auto;
-}
+} */
 .news .news_layout .news__list li time {
 	color: #979797;
 }
@@ -524,6 +563,7 @@ section.appear {
 	align-items: center;
 	position: relative;
 	grid-template-columns: 250px 1fr;
+	margin-bottom: 40px;
 }
 
 .contact_form li.contact_form__textarea, .contact_form li.contact_form__privacy {
@@ -590,10 +630,10 @@ section.appear {
 .contact_form li textarea {
 	height: 150px;
 }
-.site-main .entry-content p {
+/* .site-main .entry-content p {
 	display: block;
 	margin-bottom: 40px;
-}
+} */
 
 .contact_form li .contact_form__name {
 	display: grid;
@@ -963,6 +1003,24 @@ body .is-layout-flex {
 		margin-bottom: 100px;
 	}
 
+	/* news */
+	.news_layout .listing-item {
+		display: flex;
+		flex-direction: column-reverse;
+		line-height: 1.6;
+	}
+	.news_layout .listing-item:not(:last-child) {
+		margin-bottom: 8px;
+	}
+
+	.news_layout .listing-item .date {
+		font-size: 0.75rem;
+	}
+
+	.news_layout .listing-item a {
+		position: static;
+	}
+
 	/* blog */
 	.section_blog {
 		padding: 5rem 0;
@@ -1307,17 +1365,21 @@ header .global_navigation_form {
 		position: relative;
 	}
 	header nav ul .global_navigation__link .accordion {
-		display: none;
 		position: absolute;
 		z-index: 200;
 		width: 100%;
+		transition: 1s;
+		visibility: hidden;
+		opacity: 0;
 	}
 
 	header nav ul .global_navigation__link:hover .accordion {
-		display: block;
+		visibility: visible;
+		opacity: 1;
 		background: rgb(255, 255, 255, 0.5);
 		transition: 0.2s;
 	}
+
 
 	header nav .accordion__list {
 		display: flex;
